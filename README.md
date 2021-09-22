@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+1。 css文件要先import进来，可以在APP.js import，也可以在子的js中import，如果不import，那么样式不生效
+2。map的一定要指定一个key
+
+3。return只能返回一个对象，实践就是把所有的比如输入框，按钮，子div等都放到一个大的div里面返回
+4。函数变量赋值需要在{}中
+5。  const [ toDoList, setToDoList ] = useState(data);
+     setToDoList(mapped) is analogous to this.setState({ toDoList: mapped }), which was used when we worked with state in class components.
+mapped是已匹配的数据集,useState返回两个变量，一个是当前的数据集，另一个是该数据集的set函数，该函数的变量是一个数据集
+6。
+<ToDoList toDoList={toDoList} setToDoList={setToDoList}  handleToggle={handleToggle}  handleFilter={handleFilter}/>
+
+可以用这个方式在APP.js中把参数(变量或者函数(在APP.js中定义))传递给引用的函数ToDoList
