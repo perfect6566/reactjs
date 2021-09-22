@@ -1,0 +1,8 @@
+.strike {
+    text-decoration: line-through;
+ }
+
+ .ready {
+    text-decoration: line-through;
+    color:green;
+ }
